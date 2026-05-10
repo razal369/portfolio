@@ -733,4 +733,8 @@ footer p {
     .section-title {
         font-size: 1.5rem;
     }
+
+    .skills-grid, .projects-grid, .focus-areas {
+        grid-template-columns: 1fr;
+    }
 }
