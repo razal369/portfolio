@@ -739,9 +739,16 @@ footer p {
     }
 
     .section-title {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         flex-direction: row;
-        gap: 5px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-wrap: nowrap;
+    }
+
+    .section-title .accent {
+        font-size: 1.5rem;
     }
 
     .skills-grid, .projects-grid, .focus-areas {
@@ -776,5 +783,20 @@ footer p {
     .profile-pic {
         width: 200px;
         height: 200px;
+    }
+}
+
+@media (max-width: 400px) {
+    .section-title {
+        font-size: 1rem;
+        gap: 4px;
+    }
+    
+    .section-title .accent {
+        font-size: 1.2rem;
+    }
+    
+    .glitch {
+        font-size: 1.8rem;
     }
 }
