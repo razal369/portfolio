@@ -94,6 +94,11 @@ h1, h2, h3, h4 {
     text-align: center;
     text-transform: uppercase;
     letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 /* Navigation */
@@ -180,7 +185,7 @@ section {
 
 /* Hero Section */
 #hero {
-    align-items: flex-start;
+    align-items: center;
     padding-top: 10rem;
 }
 
@@ -213,7 +218,8 @@ section {
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     max-width: 600px;
-    margin-top: 2rem;
+    width: 100%;
+    margin: 2rem auto 0;
 }
 
 .terminal-header {
@@ -723,49 +729,52 @@ footer p {
     }
 
     .glitch {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
+        word-break: break-word;
     }
 
     section {
         padding: 4rem 5%;
+        min-height: auto;
     }
 
     .section-title {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
+        flex-direction: row;
+        gap: 5px;
     }
 
     .skills-grid, .projects-grid, .focus-areas {
         display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        scroll-snap-type: x mandatory;
-        padding-bottom: 1.5rem;
-        gap: 1.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        overflow-x: visible;
+        padding-bottom: 0;
     }
 
     .skill-category, .project-card, .focus-item {
-        flex: 0 0 85%;
-        scroll-snap-align: start;
+        flex: 1 1 auto;
+        width: 100%;
     }
 
-    .skills-grid::-webkit-scrollbar,
-    .projects-grid::-webkit-scrollbar,
-    .focus-areas::-webkit-scrollbar {
-        height: 4px;
+    .contact-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
     }
-    
-    .skills-grid::-webkit-scrollbar-thumb,
-    .projects-grid::-webkit-scrollbar-thumb,
-    .focus-areas::-webkit-scrollbar-thumb {
-        background-color: var(--accent-green);
-        border-radius: 4px;
+
+    .contact-info .terminal-text {
+        font-size: 1rem;
     }
-    
-    .skills-grid::-webkit-scrollbar-track,
-    .projects-grid::-webkit-scrollbar-track,
-    .focus-areas::-webkit-scrollbar-track {
-        background: #1a1a1a;
-        border-radius: 4px;
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .profile-pic {
+        width: 200px;
+        height: 200px;
     }
 }
