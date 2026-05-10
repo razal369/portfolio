@@ -735,6 +735,37 @@ footer p {
     }
 
     .skills-grid, .projects-grid, .focus-areas {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+        padding-bottom: 1.5rem;
+        gap: 1.5rem;
+    }
+
+    .skill-category, .project-card, .focus-item {
+        flex: 0 0 85%;
+        scroll-snap-align: start;
+    }
+
+    .skills-grid::-webkit-scrollbar,
+    .projects-grid::-webkit-scrollbar,
+    .focus-areas::-webkit-scrollbar {
+        height: 4px;
+    }
+    
+    .skills-grid::-webkit-scrollbar-thumb,
+    .projects-grid::-webkit-scrollbar-thumb,
+    .focus-areas::-webkit-scrollbar-thumb {
+        background-color: var(--accent-green);
+        border-radius: 4px;
+    }
+    
+    .skills-grid::-webkit-scrollbar-track,
+    .projects-grid::-webkit-scrollbar-track,
+    .focus-areas::-webkit-scrollbar-track {
+        background: #1a1a1a;
+        border-radius: 4px;
     }
 }
