@@ -248,6 +248,7 @@ section {
 
 .terminal-body p {
     margin-bottom: 0.5rem;
+    word-break: break-word;
 }
 
 .terminal-body .output {
@@ -288,6 +289,8 @@ section {
 .profile-pic {
     width: 280px;
     height: 280px;
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     border: 3px solid var(--accent-green);
     object-fit: cover;
